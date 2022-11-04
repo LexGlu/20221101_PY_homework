@@ -1,4 +1,4 @@
-def str_manipulation():
+def string_manipulation():
     string = input('Enter text\n')
     if len(string) < 2:
         return ''
@@ -6,4 +6,4 @@ def str_manipulation():
         return string[:2] + string[-2:]
 
 
-print(str_manipulation())
+print(string_manipulation())
