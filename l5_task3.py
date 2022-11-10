@@ -25,7 +25,7 @@ def words_combination():
 
         # this loop ensures that output consists of exact same chars as input
         # e.g. so that from 'hello' we will not get 'lllll', 'hheee' etc
-        while temp_word != '':
+        while temp_word:
             char = random.choice(temp_word)
             x += char
             temp_word = temp_word.replace(char, '', 1)
