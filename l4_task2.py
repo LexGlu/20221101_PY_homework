@@ -3,7 +3,7 @@ def valid_number():
     if phone_number.isdigit() and len(phone_number) == 10:
         print('Congratulations, your phone number is VALID!')
     else:
-        print(f'Oopsie, your phone number is INVALID!')
+        print('Oopsie, your phone number is INVALID! Try again.')
         valid_number()
 
 
