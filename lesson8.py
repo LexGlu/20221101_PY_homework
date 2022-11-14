@@ -66,8 +66,8 @@ def make_operation(operator, *args):
 
 
 favorite_movie()
-# make_country('Peru', 'Lima')
-make_country('Peru', 'Lima', population=33600000, currency='Sol')
+make_country('Peru', 'Lima')
+# make_country('Peru', 'Lima', population=33600000, currency='Sol')
 print(make_operation('+', 7, 7, 2))  # 16
 print(make_operation('-', 5, 5, -10, -20))  # 30
 print(make_operation('*', 7, 6))  # 42
