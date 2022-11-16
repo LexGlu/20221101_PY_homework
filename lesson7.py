@@ -59,7 +59,7 @@ def stock_sum():
     total_stock = 0
 
     for item, quantity in stock.items():
-        if prices.get(item):  # checks if 2 dicts don't have different keys (in order not to crush)
+        if prices.get(item):  # checks if 2 dicts don't have different keys (in order not to crash)
             total_stock += quantity * prices[item]
 
     print(f'Task 2. Total price of the stock: {total_stock}')
@@ -78,6 +78,21 @@ def lst_comprehension():
     print(f'Task 3. Resulting list with tuples: {res}')
 
 
+"""
+Task 4.
+Створити лист із днями тижня.
+В один рядок (ну або як завжди) створити словник виду: {1: “Monday”, 2:...
+Також в один рядок або як вдасться створити зворотний словник {“Monday”: 1,
+"""
+
+
+def week():
+    days = {1: 'Monday', 2: 'Tuesday', 3: 'Wednesday', 4: 'Thursday', 5: 'Friday', 6: 'Saturday', 7: 'Sunday'}
+    days_r = {value: key for key, value in days.items()}
+    print(f'Task 4. {days_r}')
+
+
 occurrences()
 stock_sum()
 lst_comprehension()
+week()
