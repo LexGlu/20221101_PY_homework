@@ -39,7 +39,7 @@ def task2(n):
     print(f'Count of prime nums: {count}, list of prime nums: {prime_nums}')
 
 
-task2(50000)
+task2(50)
 
 
     # n < p < 2n
