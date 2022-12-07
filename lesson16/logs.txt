@@ -1,0 +1,11 @@
+...Critical error! Your PC will be self destroyed in 10 seconds!
+...Critical error! Your PC will be self destroyed in 9 seconds!
+...Critical error! Your PC will be self destroyed in 8 seconds!
+...Critical error! Your PC will be self destroyed in 7 seconds!
+...Critical error! Your PC will be self destroyed in 6 seconds!
+...Critical error! Your PC will be self destroyed in 5 seconds!
+...Critical error! Your PC will be self destroyed in 4 seconds!
+...Critical error! Your PC will be self destroyed in 3 seconds!
+...Critical error! Your PC will be self destroyed in 2 seconds!
+...Critical error! Your PC will be self destroyed in 1 second!
+...Boom!
