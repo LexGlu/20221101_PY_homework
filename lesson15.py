@@ -72,42 +72,41 @@ CHANNELS = ["BBC", "Discovery", "TV1000"]
 
 class TVController:
 
-    current_position = 0
-
     def __init__(self, channels: list):
         self.channels = channels
+        self.current_position = 0
 
     def number_of_channels(self):
         return len(self.channels)
 
     def first_channel(self):
-        TVController.current_position = 0
-        return self.channels[TVController.current_position]
+        self.current_position = 0
+        return self.channels[self.current_position]
 
     def last_channel(self):
-        TVController.current_position = len(self.channels) - 1
-        return self.channels[TVController.current_position]
+        self.current_position = len(self.channels) - 1
+        return self.channels[self.current_position]
 
     def turn_channel(self, channel_num: int):
-        TVController.current_position = channel_num - 1
-        return self.channels[TVController.current_position]
+        self.current_position = channel_num - 1
+        return self.channels[self.current_position]
 
     def next_channel(self):
-        if TVController.current_position == TVController.number_of_channels(self) - 1:
+        if self.current_position == TVController.number_of_channels(self) - 1:
             return TVController.first_channel(self)
         else:
-            TVController.current_position += 1
-            return self.channels[TVController.current_position]
+            self.current_position += 1
+            return self.channels[self.current_position]
 
     def previous_channel(self):
-        if TVController.current_position == 0:
+        if self.current_position == 0:
             return TVController.last_channel(self)
         else:
-            TVController.current_position -= 1
-            return self.channels[TVController.current_position]
+            self.current_position -= 1
+            return self.channels[self.current_position]
 
     def current_channel(self):
-        return self.channels[TVController.current_position]
+        return self.channels[self.current_position]
 
     def is_exist(self, n: int or str):
         if n in self.channels or n in range(TVController.number_of_channels(self)):
