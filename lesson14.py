@@ -73,16 +73,20 @@ def arg_rules(type_: type, max_length: int, contains: list):
     def check_func(func):
         @wraps(func)
         def check_args(arg):
+            errors = []
             if type(arg) != type_:
-                print(f'Type of arg "{arg}" is not "{type_}"!')
-                return False
+                errors.append(f'Type of arg "{arg}" is not "{type_.__name__}"!')
             if len(arg) > max_length:
-                print(f'Length of "{arg}" is longer than {max_length} symbols!')
-                return False
+                errors.append(f'Length of "{arg}" is longer than {max_length} symbols!')
             for symbol in contains:
                 if symbol not in arg:
-                    print(f'"{arg}" does not contain {contains} symbols!')
-                    return False
+                    errors.append(f'"{arg}" does not contain "{symbol}"!')
+            if errors:
+                i = 1
+                for error in errors:
+                    print(f'{i}. {error}')
+                    i += 1
+                return False
             return func(arg)
         return check_args
     return check_func
